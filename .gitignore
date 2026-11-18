@@ -1,0 +1,8 @@
+# Locally installed agent skills (reinstall with: npx skills add ...)
+.agents/
+.claude/
+# Taste-skill checker output
+.taste-skill/
+**/.taste-skill/
+# OS
+.DS_Store
