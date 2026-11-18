@@ -19,7 +19,7 @@ export type SaveResult = { position: number; alreadyJoined: boolean };
  *   Supabase table `waitlist` (columns: email text primary key, intent text,
  *   source text, created_at timestamptz default now()).
  * - Otherwise entries go to `data/waitlist.json` next to the app. That works
- *   for local development only; serverless hosts don't keep files.
+ *   for local development only; on Vercel it falls back to /tmp, which does not last.
  */
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -84,7 +84,11 @@ async function saveSupabase(entry: WaitlistEntry): Promise<SaveResult> {
 
 /* ---------- Local file (development) ---------- */
 
-const FILE = path.join(process.cwd(), "data", "waitlist.json");
+// Vercel's disk is read-only except /tmp, which is wiped between instances:
+// fine for a demo, not for real signups. Set the Supabase variables before launch.
+const FILE = process.env.VERCEL
+  ? path.join("/tmp", "waitlist.json")
+  : path.join(process.cwd(), "data", "waitlist.json");
 
 async function readFile(): Promise<WaitlistEntry[]> {
   try {
