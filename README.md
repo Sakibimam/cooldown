@@ -52,7 +52,7 @@ a smart account can make "wait 72 hours" a rule nobody can break.
 
 ---
 
-## 2. What Cooldown does (plain English)
+## 2. What Cooldown does:
 
 | Feature | What it means for you |
 |---|---|
