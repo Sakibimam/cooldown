@@ -6,3 +6,5 @@
 **/.taste-skill/
 # OS
 .DS_Store
+.vercel
+.env*
