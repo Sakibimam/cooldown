@@ -22,6 +22,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}

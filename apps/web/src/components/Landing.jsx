@@ -103,7 +103,7 @@ export default function Landing() {
 <div className="cd">
 
 <header className="nav">
-<div className="w navin">
+<div className="w wrap navin">
 <a href="#top" aria-label="Cooldown home" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', color: '#0A1222' }}>
 <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11.5" fill="none" stroke="#0A1222" strokeWidth="2"></circle><path d="M13 13 L13 5.5 A7.5 7.5 0 0 1 19.5 9.2 Z" fill="#1D3A70"></path></svg>
 <span style={{ fontWeight: '600', fontSize: '19px', letterSpacing: '-.025em' }}>Cooldown</span>
@@ -120,8 +120,8 @@ export default function Landing() {
 
 <main id="top">
 
-<section className="hero">
-<div className="w">
+<section className="hero" data-enter>
+<div className="w wrap">
 <h1 className="h1"><span>Put 72 hours between you</span><span>and your next bad trade.</span></h1>
 <p className="sub">Cooldown keeps your savings in a Solana account you control. You pick a delay, and each withdrawal you request waits that long. You can cancel it until then.</p>
 {notJoined && (<>
@@ -135,7 +135,6 @@ export default function Landing() {
 {joined && (<>
 <p role="status" className="enter" style={{ margin: '36px auto 0', maxWidth: '460px', fontSize: '16px', fontWeight: '500', background: '#E3EEF9', color: '#1D3A70', borderRadius: '999px', padding: '16px 24px' }}>You're on the list. We'll write to {email}.</p>
 </>)}
-<p className="fine">Quit mode costs nothing, and you keep your own keys.</p>
 </div>
 
 <div className="stage">
@@ -184,11 +183,11 @@ export default function Landing() {
 </section>
 
 <section className="sec" style={{ background: '#F6F8FA', paddingTop: '120px' }}>
-<div className="w split">
+<div className="w wrap split">
 <div>
 <h2 className="h2">Pump.fun keeps more of each dollar than a slot machine.</h2>
 <p className="lead">An independent analyst studied 44 million pump.fun trades from 6.7 million wallets in 2026. Half of those wallets lost 90% or more of what they put in.</p>
-<p style={{ fontSize: '13.5px', color: '#7C8594', margin: '28px 0 0' }}>Independent analysis, August to September 2026. Not peer-reviewed.</p>
+<p style={{ fontSize: '13.5px', color: '#5A6475', margin: '28px 0 0' }}>Independent analysis, August to September 2026. Not peer-reviewed.</p>
 </div>
 <div style={{ background: '#FFFFFF', borderRadius: '32px', padding: '44px', border: '1px solid #E4E8EE' }}>
 <p style={{ margin: '0 0 30px', fontSize: '15px', fontWeight: '600', color: '#3B4556' }}>What the platform keeps from each $1</p>
@@ -211,7 +210,7 @@ export default function Landing() {
 </section>
 
 <section id="how" className="sec">
-<div className="w">
+<div className="w wrap">
 <h2 className="h2">You set the rules once. Solana enforces them on each withdrawal.</h2>
 <div className="steps">
 <ol style={{ listStyle: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'column', gap: '6px' }}>
@@ -222,7 +221,7 @@ export default function Landing() {
 <span className="num" style={{ flex: 'none', width: '34px', height: '34px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '600', background: s.dotBg, color: s.dotFg }}>{s.n}</span>
 <span style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
 <span style={{ fontSize: '24px', fontWeight: '600', letterSpacing: '-.025em', color: s.titleColor }}>{s.title}</span>
-<span style={{ fontSize: '16.5px', lineHeight: '1.6', color: '#5A6475' }}>{s.body}</span>
+<span style={{ fontSize: '16.5px', lineHeight: '1.6', color: '#3B4556' }}>{s.body}</span>
 </span>
 </span>
 </button>
@@ -290,7 +289,7 @@ export default function Landing() {
 </section>
 
 <section id="mirror" className="sec" style={{ background: '#F6F8FA' }}>
-<div className="w mirror">
+<div className="w wrap mirror">
 <div>
 <h2 className="h2">See what memecoins have cost you.</h2>
 <p className="lead">Paste a Solana wallet address. Mirror totals the money that went into memecoins and perps and the money that came back. You don't connect a wallet or sign anything.</p>
@@ -306,7 +305,7 @@ export default function Landing() {
 <div className="receipt" aria-label="Sample Mirror result">
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 <span style={{ fontSize: '15px', fontWeight: '600' }}>Mirror</span>
-<span style={{ fontSize: '13px', color: '#7C8594' }}>Sample wallet, last 12 months</span>
+<span style={{ fontSize: '13px', color: '#5A6475' }}>Sample wallet, last 12 months</span>
 </div>
 <div style={{ marginTop: '18px' }}>
 <div className="row"><span style={{ color: '#5A6475' }}>Put into memecoins and perps</span><span className="num" style={{ fontWeight: '600' }}>$14,200</span></div>
@@ -323,12 +322,12 @@ export default function Landing() {
 </section>
 
 <section className="sec">
-<div className="w">
+<div className="w wrap">
 <figure style={{ margin: '0', maxWidth: '980px' }}>
 <blockquote className="quote" style={{ fontSize: 'clamp(34px,4.6vw,64px)' }}>“I still just throw my money at pump.fun, hate myself, get paid, repeat.”</blockquote>
 <figcaption style={{ marginTop: '24px', fontSize: '15px', color: '#5A6475' }}>A trader on r/solana, July 2025</figcaption>
 </figure>
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,320px),1fr))', gap: '56px', marginTop: '88px', paddingTop: '56px', borderTop: '1px solid #E4E8EE' }}>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,300px),1fr))', gap: '24px', marginTop: '72px', paddingTop: '56px', borderTop: '1px solid #E4E8EE' }}>
 <figure style={{ margin: '0' }}>
 <blockquote className="quote" style={{ fontSize: '30px' }}>“Need app to block cryptocasinos, will pay 500€ usdt.”</blockquote>
 <figcaption style={{ marginTop: '16px', fontSize: '14.5px', color: '#5A6475' }}>r/problemgambling, March 2026</figcaption>
@@ -342,7 +341,7 @@ export default function Landing() {
 </section>
 
 <section id="pricing" className="sec" style={{ paddingTop: '0' }}>
-<div className="w">
+<div className="w wrap">
 <h2 className="h2">Quit for free, or trade with limits for $9 a month.</h2>
 <div className="plans">
 <div className="plan" style={{ background: '#0A1222', color: '#FFFFFF' }}>
@@ -376,18 +375,18 @@ export default function Landing() {
 </section>
 
 <section className="sec" style={{ background: '#F6F8FA' }}>
-<div className="w split" style={{ alignItems: 'start' }}>
+<div className="w wrap split" style={{ alignItems: 'start' }}>
 <h2 className="h2">Cooldown can't touch your money.</h2>
 <div style={{ display: 'flex', flexDirection: 'column', gap: '34px' }}>
-<div style={{ display: 'flex', gap: '18px' }}><span style={{ flex: 'none', width: '44px', height: '44px', borderRadius: '14px', background: '#FFFFFF', border: '1px solid #E4E8EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4" fill="none" stroke="#1D3A70" strokeWidth="2"></circle><path d="M11 12l8-8M16 7l3 3" fill="none" stroke="#1D3A70" strokeWidth="2" strokeLinecap="round"></path></svg></span><div><p style={{ margin: '0', fontSize: '19px', fontWeight: '600', letterSpacing: '-.01em' }}>You hold the keys</p><p style={{ margin: '6px 0 0', fontSize: '16.5px', lineHeight: '1.6', color: '#5A6475' }}>Your own wallet controls the account, a Squads smart account on Solana. We hold none of your funds.</p></div></div>
-<div style={{ display: 'flex', gap: '18px' }}><span style={{ flex: 'none', width: '44px', height: '44px', borderRadius: '14px', background: '#FFFFFF', border: '1px solid #E4E8EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#1D3A70" strokeWidth="2"></circle><path d="M12 7.5V12l3 2" fill="none" stroke="#1D3A70" strokeWidth="2" strokeLinecap="round"></path></svg></span><div><p style={{ margin: '0', fontSize: '19px', fontWeight: '600', letterSpacing: '-.01em' }}>Solana runs the clock</p><p style={{ margin: '6px 0 0', fontSize: '16.5px', lineHeight: '1.6', color: '#5A6475' }}>Solana enforces the delay. If we shut down tomorrow, your rules and your money stay where they are.</p></div></div>
-<div style={{ display: 'flex', gap: '18px' }}><span style={{ flex: 'none', width: '44px', height: '44px', borderRadius: '14px', background: '#FFFFFF', border: '1px solid #E4E8EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" fill="none" stroke="#1D3A70" strokeWidth="2" strokeLinejoin="round"></path></svg></span><div><p style={{ margin: '0', fontSize: '19px', fontWeight: '600', letterSpacing: '-.01em' }}>We won't ask for your seed phrase</p><p style={{ margin: '6px 0 0', fontSize: '16.5px', lineHeight: '1.6', color: '#5A6475' }}>If someone asks for it in our name, they're running a scam.</p></div></div>
+<div style={{ display: 'flex', gap: '18px' }}><span style={{ flex: 'none', width: '44px', height: '44px', borderRadius: '14px', background: '#FFFFFF', border: '1px solid #E4E8EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4" fill="none" stroke="#1D3A70" strokeWidth="2"></circle><path d="M11 12l8-8M16 7l3 3" fill="none" stroke="#1D3A70" strokeWidth="2" strokeLinecap="round"></path></svg></span><div><p style={{ margin: '0', fontSize: '19px', fontWeight: '600', letterSpacing: '-.01em' }}>You hold the keys</p><p style={{ margin: '6px 0 0', fontSize: '16.5px', lineHeight: '1.6', color: '#3B4556' }}>Your own wallet controls the account, a Squads smart account on Solana. We hold none of your funds.</p></div></div>
+<div style={{ display: 'flex', gap: '18px' }}><span style={{ flex: 'none', width: '44px', height: '44px', borderRadius: '14px', background: '#FFFFFF', border: '1px solid #E4E8EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#1D3A70" strokeWidth="2"></circle><path d="M12 7.5V12l3 2" fill="none" stroke="#1D3A70" strokeWidth="2" strokeLinecap="round"></path></svg></span><div><p style={{ margin: '0', fontSize: '19px', fontWeight: '600', letterSpacing: '-.01em' }}>Solana runs the clock</p><p style={{ margin: '6px 0 0', fontSize: '16.5px', lineHeight: '1.6', color: '#3B4556' }}>Solana enforces the delay. If we shut down tomorrow, your rules and your money stay where they are.</p></div></div>
+<div style={{ display: 'flex', gap: '18px' }}><span style={{ flex: 'none', width: '44px', height: '44px', borderRadius: '14px', background: '#FFFFFF', border: '1px solid #E4E8EE', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" fill="none" stroke="#1D3A70" strokeWidth="2" strokeLinejoin="round"></path></svg></span><div><p style={{ margin: '0', fontSize: '19px', fontWeight: '600', letterSpacing: '-.01em' }}>We won't ask for your seed phrase</p><p style={{ margin: '6px 0 0', fontSize: '16.5px', lineHeight: '1.6', color: '#3B4556' }}>If someone asks for it in our name, they're running a scam.</p></div></div>
 </div>
 </div>
 </section>
 
 <section id="faq" className="sec">
-<div className="w faq">
+<div className="w wrap faq">
 <div>
 <h2 className="h2">Before you join</h2>
 <p className="lead" style={{ fontSize: '17px' }}>Message the founder on X or Telegram with anything else.</p>
@@ -407,7 +406,7 @@ export default function Landing() {
 </details>
 <details>
 <summary>What does my buddy see?<svg className="chev" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="#0A1222" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"></path></svg></summary>
-<p>Your buddy gets a Telegram message with the amount and the unlock time when you request a withdrawal. They can't move your money or see your balance.</p>
+<p>Your buddy gets a Telegram message with the amount and the time it moves when you request a withdrawal. They can't move your money or see your balance.</p>
 </details>
 <details>
 <summary>Is this a treatment for gambling?<svg className="chev" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="#0A1222" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"></path></svg></summary>
@@ -422,12 +421,12 @@ export default function Landing() {
 </section>
 
 <section id="join" style={{ padding: '0 0 120px' }}>
-<div className="w">
+<div className="w wrap">
 <div className="cta">
-<h2 className="h2" style={{ margin: '0 auto', maxWidth: '13em', color: '#0A1222' }}>Set your rules while you're calm.</h2>
-<p className="lead" style={{ margin: '22px auto 0', color: '#3B4556' }}>The founder sets up the first 100 accounts by hand. Quit mode stays free.</p>
+<h2 className="h2" style={{ margin: '0', maxWidth: '18em', color: '#0A1222' }}>Set your rules while you're calm.</h2>
+<p className="lead" style={{ margin: '22px 0 0', color: '#3B4556' }}>The founder sets up the first 100 accounts by hand. Quit mode stays free.</p>
 {notJoined && (<>
-<form className="form" style={{ opacity: '1', animation: 'none', background: '#FFFFFF', borderColor: '#C9DAF0' }} onSubmit={submit} aria-label="Join the waitlist">
+<form className="form" style={{ opacity: '1', animation: 'none', background: '#FFFFFF', borderColor: '#C9DAF0', margin: '36px 0 0' }} onSubmit={submit} aria-label="Join the waitlist">
 <label htmlFor="e2" className="sr">Email address</label>
 <input id="e2" type="email" required placeholder="you@email.com" value={email} onChange={onEmail} />
 <button className="go" type="submit">Join the waitlist</button>
@@ -443,7 +442,7 @@ export default function Landing() {
 </main>
 
 <footer style={{ borderTop: '1px solid #EEF1F5' }}>
-<div className="w" style={{ paddingTop: '36px', paddingBottom: '48px', display: 'flex', flexWrap: 'wrap', gap: '16px 40px', justifyContent: 'space-between', fontSize: '14px', color: '#5A6475' }}>
+<div className="w wrap" style={{ paddingTop: '36px', paddingBottom: '48px', display: 'flex', flexWrap: 'wrap', gap: '16px 40px', justifyContent: 'space-between', fontSize: '14px', color: '#5A6475' }}>
 <span>Cooldown is in development. Not financial advice.</span>
 <span>Struggling right now? UK 0808 8020 133. US 1-800-GAMBLER.</span>
 </div>
