@@ -25,7 +25,7 @@ export const FinalCTA = () => (
               Set your rules while you're calm.
             </h2>
             <p data-testid="final-cta-subheading" className="mt-5 text-lg text-white/65 leading-relaxed">
-              The first 100 accounts are onboarded by the founder.
+              The founder sets up the first 100 accounts.
             </p>
             <div className="mt-9">
               <WaitlistForm dark compact source="final" />

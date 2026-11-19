@@ -35,12 +35,11 @@ export const Mirror = () => {
       />
       <div className="relative wrap max-w-[1280px] mx-auto px-6 lg:px-12">
         <div className="text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Mirror</span>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-[-0.03em] leading-[1.1]">
-            Mirror adds up what memecoins have cost a wallet
+            See what memecoins cost you.
           </h2>
           <p className="mt-4 text-lg text-white/55 leading-relaxed max-w-2xl mx-auto">
-            Paste a Solana wallet. It reads public onchain history, so you never connect or sign anything.
+            Paste a Solana wallet. Paste any Solana wallet. Nothing to connect or sign.
           </p>
         </div>
 
@@ -79,7 +78,7 @@ export const Mirror = () => {
             onClick={() => { setWallet(SAMPLE_WALLET); run(SAMPLE_WALLET); }}
             className="mt-4 text-sm text-white/40 hover:text-white/70 transition-colors underline underline-offset-4 decoration-white/20"
           >
-            No wallet handy? Try a sample trader
+            Try a sample wallet
           </button>
 
           <AnimatePresence>

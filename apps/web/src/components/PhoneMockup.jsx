@@ -66,10 +66,7 @@ export const DelayPickerScreen = () => (
   <div className="text-[#0B1220]">
     <StatusBar />
     <div className="px-6 pt-5 pb-7">
-      <div className="text-[12px] uppercase tracking-[0.16em] font-semibold text-[#64748B]">Step 01</div>
-      <div className="text-[22px] font-semibold tracking-tight mt-1">Choose your delay</div>
-      <p className="text-[13px] text-[#64748B] mt-1.5 leading-relaxed">Set it on a calm day. Future you will thank you.</p>
-      <div className="mt-6 grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-2">
         {["24h", "48h", "72h", "7d", "14d", "30d"].map((d) => (
           <span
             key={d}
@@ -106,10 +103,7 @@ export const DepositScreen = () => (
   <div className="text-[#0B1220]">
     <StatusBar />
     <div className="px-6 pt-5 pb-7">
-      <div className="text-[12px] uppercase tracking-[0.16em] font-semibold text-[#64748B]">Step 02</div>
-      <div className="text-[22px] font-semibold tracking-tight mt-1">Send savings &amp; salary in</div>
-      <p className="text-[13px] text-[#64748B] mt-1.5 leading-relaxed">Your Cooldown address works like an account number. Point your paycheck at it.</p>
-      <div className="mt-6 bg-white rounded-2xl border border-[#0B1220]/[0.06] p-5 flex flex-col items-center">
+      <div className="bg-white rounded-2xl border border-[#0B1220]/[0.06] p-5 flex flex-col items-center">
         <svg width="128" height="128" viewBox="0 0 29 29" shapeRendering="crispEdges" className="rounded-lg">
           <rect width="29" height="29" fill="white"/>
           <g fill="#0B1220">

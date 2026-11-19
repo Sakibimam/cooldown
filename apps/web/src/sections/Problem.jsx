@@ -16,9 +16,8 @@ export const Problem = () => {
         style={{ background: "radial-gradient(closest-side, rgba(255,77,46,0.14), transparent)" }}
       />
       <div className="relative wrap max-w-[1280px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">The problem</span>
             <div
               data-testid="problem-stat-number"
               className="tabular mt-6 text-[clamp(5rem,14vw,10rem)] font-semibold tracking-[-0.04em] leading-none text-[#FF4D2E]"
@@ -26,13 +25,13 @@ export const Problem = () => {
               49%
             </div>
             <p className="mt-5 text-lg sm:text-xl text-white/70 leading-relaxed max-w-md">
-              of 6.7M pump.fun wallets lost 90% or more of everything they put in.
+              of pump.fun wallets lost 90% or more.
             </p>
             <p className="mt-6 text-base text-white/45 leading-relaxed max-w-md">
-              Memecoins keep about 25¢ of every $1. A slot machine keeps 3.5¢.
+              A slot machine keeps 3.5¢ of every dollar. Memecoins keep 25¢.
             </p>
             <p className="mt-8 text-xs text-white/30">
-              Source: 2026 onchain analysis of 6.7M pump.fun wallets. Not peer-reviewed.
+              Onchain study of 6.7M wallets, 2026.
             </p>
           </div>
 

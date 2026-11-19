@@ -3651,3 +3651,5 @@ html.m-enter [data-enter] .enter-d3 { animation-delay: 0.9s; }
 .cta-scrim { background: linear-gradient(90deg, rgba(7,11,20,0.93) 0%, rgba(7,11,20,0.86) 50%, rgba(7,11,20,0.5) 100%); }
 input:focus-visible, button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #38BDF8 !important; outline-offset: 2px; }
 .text-white\/70 { color: rgb(255 255 255 / 0.86); }
+/* Content sits in the middle of each screen-tall section, not stuck at its top. */
+main > section:not(#hero) { display: flex; flex-direction: column; justify-content: center; }

@@ -35,9 +35,8 @@ export const Voices = () => (
     <div className="wrap max-w-[1280px] mx-auto px-6 lg:px-12">
     <div className="mb-12">
       <div>
-        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#64748B]">Real voices</span>
         <h2 className="mt-3 text-[clamp(1.8rem,3.5vw,2.6rem)] font-semibold tracking-[-0.03em] text-[#0B1220]">
-          What people trying to stop trading have written
+          In their words
         </h2>
       </div>
     </div>

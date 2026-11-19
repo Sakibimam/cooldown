@@ -6,15 +6,9 @@ import { Loader2, Share2, Check } from "lucide-react";
 import { joinWaitlist } from "../lib/api";
 import { EASE } from "../lib/motion";
 
-const INTENTS = [
-  { value: "quitting", label: "Quitting" },
-  { value: "trading", label: "Trading with rules" },
-  { value: "helping", label: "Helping someone" },
-];
-
 export const WaitlistForm = ({ dark = false, compact = false, source = "hero" }) => {
   const [email, setEmail] = useState("");
-  const [intent, setIntent] = useState(null);
+  const intent = null;
   const [state, setState] = useState("idle"); // idle | loading | done
   const [error, setError] = useState("");
   const [result, setResult] = useState(null);
@@ -102,7 +96,7 @@ export const WaitlistForm = ({ dark = false, compact = false, source = "hero" })
             className="w-full"
             noValidate
           >
-            <label htmlFor={`${prefix}-email`} className={`block mb-2 text-sm font-medium ${dark ? "text-white/70" : "text-[#475569]"}`}>Email address</label>
+            <label htmlFor={`${prefix}-email`} className="sr-only">Email address</label>
             <div className={`flex flex-col sm:flex-row gap-3 ${compact ? "" : ""}`}>
               <input
                 id={`${prefix}-email`}
@@ -132,28 +126,6 @@ export const WaitlistForm = ({ dark = false, compact = false, source = "hero" })
                   "Join the waitlist"
                 )}
               </button>
-            </div>
-            <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2">
-              <span className={`text-xs ${dark ? "text-white/40" : "text-[#94A3B8]"}`}>What brings you here?</span>
-              {INTENTS.map((it) => (
-                <button
-                  key={it.value}
-                  type="button"
-                  data-testid={`${prefix}-intent-${it.value}`}
-                  onClick={() => setIntent(intent === it.value ? null : it.value)}
-                  className={`btn-press text-xs font-medium px-3.5 h-8 rounded-full border transition-colors ${
-                    intent === it.value
-                      ? dark
-                        ? "bg-white text-[#0B1220] border-white"
-                        : "bg-[#0B1220] text-white border-[#0B1220]"
-                      : dark
-                        ? "border-white/[0.16] text-white/60 hover:text-white"
-                        : "border-[#0B1220]/[0.14] text-[#64748B] hover:text-[#0B1220]"
-                  }`}
-                >
-                  {it.label}
-                </button>
-              ))}
             </div>
             {error && (
               <p data-testid={`${prefix}-waitlist-error`} className="mt-3 text-sm font-medium text-[#FF4D2E]" role="alert">

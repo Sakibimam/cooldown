@@ -51,7 +51,7 @@ export const TheTurn = () => {
           style={{ color: subColor }}
           className="mt-6 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto"
         >
-          It is the same chart and the same you. The 72 hours between the urge and the money is what changed.
+          Same chart, same you. Only the wait changed.
         </motion.p>
 
         <div data-testid="turn-signature-cooling-canvas" className="mt-14 max-w-3xl mx-auto">

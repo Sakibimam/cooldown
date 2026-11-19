@@ -6,19 +6,19 @@ const pillars = [
   {
     icon: KeyRound,
     title: "Non-custodial",
-    body: "A Squads smart account you control. We can't touch your money — only the timer stands between you and it.",
+    body: "A Squads smart account only you control.",
     testid: "trust-pillar-noncustodial",
   },
   {
     icon: Anchor,
     title: "Enforced on Solana",
-    body: "The wait lives on the blockchain, not our servers. If we disappeared tomorrow, your rules would still hold.",
+    body: "The delay runs onchain, not on our servers.",
     testid: "trust-pillar-onchain",
   },
   {
     icon: ShieldOff,
-    title: "We never ask for your seed phrase",
-    body: "Ever. Anyone who does is robbing you. Yes, even if their logo looks like ours.",
+    title: "No seed phrase, ever",
+    body: "Anyone asking for it is not us.",
     testid: "trust-pillar-zero-seed",
   },
 ];
@@ -29,14 +29,11 @@ export const Trust = () => (
       <div
         className="max-w-3xl"
       >
-        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#64748B]">Trust</span>
         <h2
           data-testid="trust-headline"
           className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-[-0.03em] leading-[1.1] text-[#0B1220]"
         >
-          Your keys. Your money.
-          <br />
-          Our only job is the wait.
+          Your keys stay yours
         </h2>
       </div>
 

@@ -10,24 +10,23 @@ const modes = {
   quit: {
     label: "Quit mode",
     price: "Free forever",
-    tagline: "For when you're done. Really done.",
+    tagline: "For when you're done.",
     features: [
-      "Long delays — 72 hours to 30 days",
-      "Buddy alerts on every withdrawal",
-      "Full memecoin lockout for 1–12 months",
-      "Stricter rules apply instantly, always",
+      "Delays from 72 hours to 30 days",
+      "Buddy alerts on withdrawals",
+      "Memecoin lockout, 1 to 12 months",
     ],
     screen: <QuitModeScreen />,
   },
   trader: {
     label: "Trader mode",
     price: "$9/month",
-    tagline: "Keep trading. Stop blowing up.",
+    tagline: "Trade without blowing up.",
     features: [
-      "Daily loss cap that actually stops you",
-      "Trade limit per day, set when calm",
-      "Blue chips instant — SOL, BTC, stables",
-      "New tokens and perps wait your delay",
+      "A daily loss cap",
+      "A daily trade limit",
+      "SOL, BTC and stables instant",
+      "New tokens and perps wait",
     ],
     screen: <TraderModeScreen />,
   },
@@ -41,9 +40,8 @@ export const TwoModes = () => {
     <section data-testid="two-modes-section" className="bg-white min-h-[100svh] py-24 sm:py-36">
       <div className="wrap max-w-[1280px] mx-auto px-6 lg:px-12">
         <div className="text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#64748B]">Two modes</span>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-[-0.03em] leading-[1.1] text-[#0B1220]">
-            Out completely, or trading with a seatbelt.
+            Quit, or trade with limits.
           </h2>
         </div>
 
@@ -78,7 +76,7 @@ export const TwoModes = () => {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={mode + "-copy"}

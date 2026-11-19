@@ -6,21 +6,21 @@ const steps = [
   {
     n: "01",
     title: "Choose your delay",
-    body: "24 hours to 30 days, set on a calm day. This is the rule future-you has to live with.",
+    body: "Anything from 24 hours to 30 days.",
     screen: <DelayPickerScreen />,
     testid: "step-1-card",
   },
   {
     n: "02",
     title: "Send savings and salary in",
-    body: "Your Cooldown address works like an account number. Point your paycheck at it.",
+    body: "Point your paycheck at your Cooldown address.",
     screen: <DepositScreen />,
     testid: "step-2-card",
   },
   {
     n: "03",
     title: "Every withdrawal waits",
-    body: "Ask any time. The money moves after your delay, you can cancel before then, and your buddy gets a heads-up.",
+    body: "Cancel any time before it moves. Your buddy hears about it.",
     screen: <WithdrawalScreen />,
     testid: "step-3-card",
   },
@@ -32,9 +32,8 @@ export const HowItWorks = () => (
       <div
         className="max-w-2xl"
       >
-        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#64748B]">How it works</span>
         <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-semibold tracking-[-0.03em] leading-[1.1] text-[#0B1220]">
-          Set one rule on a calm day, and Solana holds you to it
+          How it works
         </h2>
       </div>
 
@@ -66,8 +65,7 @@ export const HowItWorks = () => (
       <p
         className="mt-12 max-w-3xl mx-auto text-center text-[15px] text-[#64748B] leading-relaxed"
       >
-        <span className="font-semibold text-[#0B1220]">Stricter rules apply instantly.</span> Looser rules wait the
-        same delay, so you can't switch it off at 3am either.
+        <span className="font-semibold text-[#0B1220]">Stricter rules apply now.</span> Looser rules wait the same delay.
       </p>
     </div>
   </section>
